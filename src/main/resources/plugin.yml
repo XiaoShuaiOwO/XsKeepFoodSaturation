@@ -1,0 +1,17 @@
+name: XsKeepFoodSaturation
+version: 1.0.0
+main: com.xssssss.xskeepfoodsaturation.XsKeepFoodSaturation
+author: XiaoShuaiOwO
+description: 玩家死亡复活后保持死亡前的饱食度
+commands:
+  XsKeepFoodSaturation:
+    aliases: [kfs]
+permissions:
+  XsKeepFoodSaturation.help:
+    default: op
+  XsKeepFoodSaturation.reload:
+    default: op
+  XsKeepFoodSaturation.setFoodSaturation:
+    default: op
+  XsKeepFoodSaturation.bypass:
+    default: op

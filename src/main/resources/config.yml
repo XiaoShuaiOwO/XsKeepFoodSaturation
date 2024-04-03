@@ -1,0 +1,15 @@
+
+enableWorlds:
+  #可选择：全部世界，白名单，黑名单 3种模式
+  #mode: ALL/WHITELIST/BLACKLIST
+  mode: "ALL"
+  #mode为ALL时无效
+  list:
+    - "world"
+    - "world_nether"
+    - "world_the_end"
+message:
+  #是否发送消息给玩家
+  enableMessage: true
+  defaultMessage: "&a您已成功复活！但是饱食度由于神秘力量无法回满哦~"
+  bypassMessage: "&a由于您是&b&l尊贵的VIP玩家&a，已自动为您回满饱食度！"
