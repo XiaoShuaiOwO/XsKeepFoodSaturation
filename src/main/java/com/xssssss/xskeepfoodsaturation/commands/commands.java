@@ -44,7 +44,7 @@ public class commands implements CommandExecutor {
         }
         if (args[0].equalsIgnoreCase("reload")){
             if (sender.hasPermission("XsKeepFoodSaturation.reload")){
-                XsKeepFoodSaturation main = new XsKeepFoodSaturation();
+                XsKeepFoodSaturation main = (XsKeepFoodSaturation) Bukkit.getPluginManager().getPlugin("XsKeepFoodSaturation");
                 main.loadConfig();
                 main.loadData();
                 sender.sendMessage("§3[XsKeepFoodSaturation] §a插件重载成功！");
@@ -58,11 +58,18 @@ public class commands implements CommandExecutor {
             if (sender.hasPermission("XsKeepFoodSaturation.setFoodSaturation")){
                 Player player = Bukkit.getPlayer(args[1]);
                 if (player != null) {
-                    try {
-                        player.setFoodLevel(Math.min(Math.max(Integer.parseInt(args[2]), 0), 20));
+                    if (args[2] == null) {
+                        sender.sendMessage("§3[XsKeepFoodSaturation] §c缺少<satiety>参数!");
                         return true;
-                    } catch (NumberFormatException e){
-                        sender.sendMessage("§3[XsKeepFoodSaturation] §c<satiety>需要为一个0-20内的数字!");
+                    }else{
+                        try {
+                            player.setFoodLevel(Math.min(Math.max(Integer.parseInt(args[2]), 0), 20));
+                            sender.sendMessage("§3[XsKeepFoodSaturation] §a成功将玩家 §e"+args[1]+" §a的饱食度设置为 §e"+Math.min(Math.max(Integer.parseInt(args[2]), 0), 20));
+                            return true;
+                        } catch (NumberFormatException e){
+                            sender.sendMessage("§3[XsKeepFoodSaturation] §c<satiety>需要为一个0-20内的数字!");
+                            return true;
+                        }
                     }
                 }else {
                     sender.sendMessage("§3[XsKeepFoodSaturation] §c玩家不在线/不存在！");

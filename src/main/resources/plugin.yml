@@ -1,5 +1,5 @@
 name: XsKeepFoodSaturation
-version: 1.0.0
+version: 1.0.1
 main: com.xssssss.xskeepfoodsaturation.XsKeepFoodSaturation
 author: XiaoShuaiOwO
 description: 玩家死亡复活后保持死亡前的饱食度

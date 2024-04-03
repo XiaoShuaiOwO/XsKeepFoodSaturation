@@ -1,9 +1,15 @@
-
+#XsKeepFoodSaturation
+#version: 1.0.1
+#By: XiaoShuaiOwO
+#Github: https://github.com/XiaoShuaiOwO/XSkeepFoodSaturation
+setting:
+  #玩家复活后延迟多少tick修改饱食度
+  delay: 5
 enableWorlds:
   #可选择：全部世界，白名单，黑名单 3种模式
   #mode: ALL/WHITELIST/BLACKLIST
   mode: "ALL"
-  #mode为ALL时无效
+  #list在mode为ALL时无效
   list:
     - "world"
     - "world_nether"

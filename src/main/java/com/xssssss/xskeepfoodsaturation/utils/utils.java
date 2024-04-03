@@ -7,11 +7,14 @@ import java.util.logging.Logger;
 
 public class utils {
     private final Logger logger = Logger.getLogger("utils");
-    XsKeepFoodSaturation main = new XsKeepFoodSaturation();
+    private final XsKeepFoodSaturation main;
+    public utils(XsKeepFoodSaturation main) {
+        this.main = main;
+    }
     public boolean isEnableWorld(String mode, String world){
         List<String> worldlist = (List<String>)main.config.get("enableWorlds.list");
         if (!(mode.equalsIgnoreCase("ALL") || mode.equalsIgnoreCase("WHITELIST") || mode.equalsIgnoreCase("BLACKLIST"))) {
-            logger.warning("config.yml中的\"enableWorlds.mode\"只能为\"ALL/WHITELIST/BLACKLIST\"，已启用默认模式\"ALL\"！");
+            logger.warning("[XsKeepFoodSaturation] config.yml中的\"enableWorlds.mode\"只能为\"ALL/WHITELIST/BLACKLIST\"，已启用默认模式\"ALL\"！");
             mode = "ALL";
         }
         switch (mode){

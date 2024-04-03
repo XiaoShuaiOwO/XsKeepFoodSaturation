@@ -18,13 +18,13 @@ public final class XsKeepFoodSaturation extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        getLogger().info("[XsKeepFoodSaturation] XsKeepFoodSaturation已加载！");
-        getLogger().info("[XsKeepFoodSaturation] 作者：XiaoShuaiOwO");
-        getLogger().info("[XsKeepFoodSaturation] 版本：1.0.0");
+        getLogger().info("XsKeepFoodSaturation已加载！");
+        getLogger().info("作者：XiaoShuaiOwO");
+        getLogger().info("版本：1.0.1");
 
         getCommand("XSKeepFoodSaturation").setExecutor(new commands());
-        getServer().getPluginManager().registerEvents(new onDeath(), this);
-        getServer().getPluginManager().registerEvents(new onRespawn(), this);
+        getServer().getPluginManager().registerEvents(new onDeath(this), this);
+        getServer().getPluginManager().registerEvents(new onRespawn(this), this);
 
         loadConfig();
         loadData();
@@ -33,7 +33,7 @@ public final class XsKeepFoodSaturation extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        getLogger().info("[XsKeepFoodSaturation] 已卸载");
+        getLogger().info("XsKeepFoodSaturation已卸载！");
     }
 
     public void loadConfig() {
