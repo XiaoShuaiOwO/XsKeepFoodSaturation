@@ -1,4 +1,7 @@
-
+#XsKeepFoodSaturation
+#version: 1.0.0
+#By: XiaoShuaiOwO
+#Github: https://github.com/XiaoShuaiOwO/XSkeepFoodSaturation
 enableWorlds:
   #可选择：全部世界，白名单，黑名单 3种模式
   #mode: ALL/WHITELIST/BLACKLIST
