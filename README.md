@@ -9,3 +9,6 @@ XsKeepFoodSaturation.help - 指令/kfs help
 XsKeepFoodSaturation.reload - 指令/kfs reload  
 XsKeepFoodSaturation.setFoodSaturation - 指令/kfs set <player> <satiety>  
 XsKeepFoodSaturation.bypass - 绕过检测，复活时回满饱食度  
+
+发布地址：  
+https://www.minebbs.com/resources/xskeepfoodsaturation.7808/
